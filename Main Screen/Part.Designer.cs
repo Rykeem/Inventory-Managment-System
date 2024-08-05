@@ -32,7 +32,6 @@
             outsourcedButton = new RadioButton();
             addPartLabel = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            idBox = new TextBox();
             nameBox = new TextBox();
             priceBox = new TextBox();
             inventoryBox = new TextBox();
@@ -46,6 +45,9 @@
             maxLabel = new Label();
             saveButton = new Button();
             cancelButton = new Button();
+            idorcompanyBox = new TextBox();
+            companyoridlabel = new Label();
+            idBox1 = new TextBox();
             SuspendLayout();
             // 
             // houseButton
@@ -58,6 +60,7 @@
             houseButton.TabStop = true;
             houseButton.Text = "In-House";
             houseButton.UseVisualStyleBackColor = true;
+            houseButton.CheckedChanged += houseButton_CheckedChanged;
             // 
             // outsourcedButton
             // 
@@ -69,6 +72,7 @@
             outsourcedButton.TabStop = true;
             outsourcedButton.Text = "Outsourced";
             outsourcedButton.UseVisualStyleBackColor = true;
+            outsourcedButton.CheckedChanged += outsourcedButton_CheckedChanged;
             // 
             // addPartLabel
             // 
@@ -79,20 +83,12 @@
             addPartLabel.TabIndex = 2;
             addPartLabel.Text = "Add Part";
             // 
-            // idBox
-            // 
-            idBox.Location = new Point(117, 78);
-            idBox.Name = "idBox";
-            idBox.Size = new Size(135, 23);
-            idBox.TabIndex = 3;
-            // 
             // nameBox
             // 
             nameBox.Location = new Point(117, 118);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(135, 23);
             nameBox.TabIndex = 4;
-            nameBox.TextChanged += textBox2_TextChanged;
             // 
             // priceBox
             // 
@@ -134,7 +130,6 @@
             inventoryLabel.Size = new Size(57, 15);
             inventoryLabel.TabIndex = 9;
             inventoryLabel.Text = "Inventory";
-            inventoryLabel.Click += label4_Click;
             // 
             // priceLabel
             // 
@@ -185,6 +180,7 @@
             saveButton.TabIndex = 15;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // cancelButton
             // 
@@ -195,11 +191,38 @@
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
             // 
+            // idorcompanyBox
+            // 
+            idorcompanyBox.Location = new Point(117, 309);
+            idorcompanyBox.Name = "idorcompanyBox";
+            idorcompanyBox.Size = new Size(135, 23);
+            idorcompanyBox.TabIndex = 17;
+            // 
+            // companyoridlabel
+            // 
+            companyoridlabel.AutoSize = true;
+            companyoridlabel.Location = new Point(18, 312);
+            companyoridlabel.Name = "companyoridlabel";
+            companyoridlabel.Size = new Size(67, 15);
+            companyoridlabel.TabIndex = 18;
+            companyoridlabel.Text = "Machine ID";
+            // 
+            // idBox1
+            // 
+            idBox1.AccessibleRole = AccessibleRole.Outline;
+            idBox1.Location = new Point(117, 78);
+            idBox1.Name = "idBox1";
+            idBox1.Size = new Size(135, 23);
+            idBox1.TabIndex = 19;
+            // 
             // Part
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(388, 450);
+            Controls.Add(idBox1);
+            Controls.Add(companyoridlabel);
+            Controls.Add(idorcompanyBox);
             Controls.Add(cancelButton);
             Controls.Add(saveButton);
             Controls.Add(maxLabel);
@@ -213,7 +236,6 @@
             Controls.Add(priceBox);
             Controls.Add(inventoryBox);
             Controls.Add(nameBox);
-            Controls.Add(idBox);
             Controls.Add(addPartLabel);
             Controls.Add(outsourcedButton);
             Controls.Add(houseButton);
@@ -229,7 +251,7 @@
         private RadioButton outsourcedButton;
         private Label addPartLabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private TextBox idBox;
+        private TextBox IDBox;
         private TextBox nameBox;
         private TextBox priceBox;
         private TextBox inventoryBox;
@@ -243,5 +265,8 @@
         private Label maxLabel;
         private Button saveButton;
         private Button cancelButton;
+        private TextBox idorcompanyBox;
+        private Label companyoridlabel;
+        private TextBox idBox1;
     }
 }

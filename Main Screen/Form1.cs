@@ -7,29 +7,17 @@ namespace Main_Screen
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Run(new Part());
+
+            Part part = new Part();
+            part.Show();
+            
         }
     }
 }
