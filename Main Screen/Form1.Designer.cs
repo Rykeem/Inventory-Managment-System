@@ -285,7 +285,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Main Screen";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
