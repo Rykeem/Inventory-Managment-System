@@ -55,7 +55,7 @@
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            button9 = new Button();
+            exitButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -68,6 +68,7 @@
             button1.TabIndex = 0;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -254,21 +255,22 @@
             dataGridViewTextBoxColumn6.HeaderText = "Max";
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // button9
+            // exitButton
             // 
-            button9.Location = new Point(1498, 415);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 15;
-            button9.Text = "Exit";
-            button9.UseVisualStyleBackColor = true;
+            exitButton.Location = new Point(1426, 415);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(75, 23);
+            exitButton.TabIndex = 15;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1608, 450);
-            Controls.Add(button9);
+            ClientSize = new Size(1513, 450);
+            Controls.Add(exitButton);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(textBox2);
@@ -321,6 +323,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private Button button9;
+        private Button exitButton;
     }
 }
