@@ -12,12 +12,22 @@ namespace Main_Screen
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addButton1_Click(object sender, EventArgs e)
         {
-
             Part part = new Part();
             part.Show();
-            
+        }
+
+        private void addButton2_Click(object sender, EventArgs e)
+        {
+            Part part = new Part();
+            part.Show();
+        }
+
+        private void modifyButton1_Click(object sender, EventArgs e)
+        {
+            ModifyPart part = new ModifyPart();
+            part.Show();
         }
     }
 }

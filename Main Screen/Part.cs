@@ -12,7 +12,7 @@ namespace Main_Screen
 {
     public partial class Part : Form
     {
-        int autoID = 1;
+        int autoID = 0;
         public Part()
         {
             InitializeComponent();

@@ -68,7 +68,7 @@
             addButton1.TabIndex = 0;
             addButton1.Text = "Add";
             addButton1.UseVisualStyleBackColor = true;
-            addButton1.Click += button1_Click;
+            addButton1.Click += addButton1_Click;
             // 
             // modifyButton1
             // 
@@ -78,6 +78,7 @@
             modifyButton1.TabIndex = 1;
             modifyButton1.Text = "Modify";
             modifyButton1.UseVisualStyleBackColor = true;
+            modifyButton1.Click += modifyButton1_Click;
             // 
             // deleteButton1
             // 
@@ -132,6 +133,7 @@
             addButton2.TabIndex = 7;
             addButton2.Text = "Add";
             addButton2.UseVisualStyleBackColor = true;
+            addButton2.Click += addButton2_Click;
             // 
             // deleteButton2
             // 
