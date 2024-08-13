@@ -16,10 +16,6 @@ namespace Main_Screen
         public Part()
         {
             InitializeComponent();
-            
-            
-            idBox1.Text = autoID.ToString();
-            idBox1.ReadOnly = true;
         }
 
         private void houseButton_CheckedChanged(object sender, EventArgs e)
@@ -35,6 +31,13 @@ namespace Main_Screen
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Part_Load(object sender, EventArgs e)
+        {
+            idBox1.Text = autoID.ToString();
+            idBox1.ReadOnly = true;
             autoID++;
         }
     }

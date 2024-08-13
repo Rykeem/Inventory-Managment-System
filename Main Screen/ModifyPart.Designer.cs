@@ -240,6 +240,7 @@
             Controls.Add(houseButton2);
             Name = "ModifyPart";
             Text = "ModifyPart";
+            Load += ModifyPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }

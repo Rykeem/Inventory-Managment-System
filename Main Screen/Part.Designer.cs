@@ -241,6 +241,7 @@
             Controls.Add(houseButton);
             Name = "Part";
             Text = "Part";
+            Load += Part_Load;
             ResumeLayout(false);
             PerformLayout();
         }

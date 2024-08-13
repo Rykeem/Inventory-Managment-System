@@ -16,9 +16,7 @@ namespace Main_Screen
         public ModifyPart()
         {
             InitializeComponent();
-            idBox2.Text = autoID.ToString();
-            idBox2.ReadOnly = true;
-            autoID++;
+            ;
         }
 
         private void addPartLabel_Click(object sender, EventArgs e)
@@ -34,6 +32,13 @@ namespace Main_Screen
         private void outsourcedButton2_CheckedChanged(object sender, EventArgs e)
         {
             companyoridlabel2.Text = "CompanyName";
+        }
+
+        private void ModifyPart_Load(object sender, EventArgs e)
+        {
+            idBox2.Text = autoID.ToString();
+            idBox2.ReadOnly = true;
+            autoID++;
         }
     }
 }

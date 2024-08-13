@@ -20,7 +20,7 @@ namespace Main_Screen
 
         private void addButton2_Click(object sender, EventArgs e)
         {
-            Part part = new Part();
+            AddProduct part = new AddProduct();
             part.Show();
         }
 
@@ -28,6 +28,11 @@ namespace Main_Screen
         {
             ModifyPart part = new ModifyPart();
             part.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

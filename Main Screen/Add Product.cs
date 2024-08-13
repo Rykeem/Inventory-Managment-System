@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Main_Screen
 {
-    public partial class Form2 : Form
+    public partial class AddProduct : Form
     {
-        public Form2()
+        int autoID =  0;
+        public AddProduct()
         {
             InitializeComponent();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            idBox3.Text = autoID.ToString();
+            idBox3.ReadOnly = true;
+            autoID++;
         }
     }
 }
