@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Main_Screen
 {
-    public partial class ModifyPart : Form
+    public partial class ModifyAddPart : Form
     {
         int autoID = 0;
-        public ModifyPart()
+        public ModifyAddPart()
         {
             InitializeComponent();
             ;
         }
 
-        private void addPartLabel_Click(object sender, EventArgs e)
+        private void addAddPartLabel_Click(object sender, EventArgs e)
         {
 
         }
@@ -34,7 +34,7 @@ namespace Main_Screen
             companyoridlabel2.Text = "CompanyName";
         }
 
-        private void ModifyPart_Load(object sender, EventArgs e)
+        private void ModifyAddPart_Load(object sender, EventArgs e)
         {
             idBox2.Text = autoID.ToString();
             idBox2.ReadOnly = true;

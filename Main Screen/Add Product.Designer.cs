@@ -42,14 +42,14 @@
             inventoryBox3 = new TextBox();
             nameBox3 = new TextBox();
             dataGridView3 = new DataGridView();
-            partID3 = new DataGridViewTextBoxColumn();
+            AddPartID3 = new DataGridViewTextBoxColumn();
             name3 = new DataGridViewTextBoxColumn();
             inventory3 = new DataGridViewTextBoxColumn();
             price3 = new DataGridViewTextBoxColumn();
             min3 = new DataGridViewTextBoxColumn();
             max3 = new DataGridViewTextBoxColumn();
             dataGridView4 = new DataGridView();
-            partID4 = new DataGridViewTextBoxColumn();
+            AddPartID4 = new DataGridViewTextBoxColumn();
             name4 = new DataGridViewTextBoxColumn();
             inventory4 = new DataGridViewTextBoxColumn();
             price4 = new DataGridViewTextBoxColumn();
@@ -59,8 +59,8 @@
             cancelButton3 = new Button();
             deleteButton3 = new Button();
             addButton3 = new Button();
-            partsLabel3 = new Label();
-            partsLabel4 = new Label();
+            AddPartsLabel3 = new Label();
+            AddPartsLabel4 = new Label();
             searchBox3 = new TextBox();
             searchButton3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -176,16 +176,16 @@
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { partID3, name3, inventory3, price3, min3, max3 });
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { AddPartID3, name3, inventory3, price3, min3, max3 });
             dataGridView3.Location = new Point(619, 92);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.Size = new Size(643, 183);
             dataGridView3.TabIndex = 32;
             // 
-            // partID3
+            // AddPartID3
             // 
-            partID3.HeaderText = "Part ID";
-            partID3.Name = "partID3";
+            AddPartID3.HeaderText = "Part ID";
+            AddPartID3.Name = "AddPartID3";
             // 
             // name3
             // 
@@ -215,16 +215,16 @@
             // dataGridView4
             // 
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { partID4, name4, inventory4, price4, min4, max4 });
+            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { AddPartID4, name4, inventory4, price4, min4, max4 });
             dataGridView4.Location = new Point(619, 402);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.Size = new Size(643, 183);
             dataGridView4.TabIndex = 33;
             // 
-            // partID4
+            // AddPartID4
             // 
-            partID4.HeaderText = "Part ID";
-            partID4.Name = "partID4";
+            AddPartID4.HeaderText = "Part ID";
+            AddPartID4.Name = "AddPartID4";
             // 
             // name4
             // 
@@ -287,23 +287,23 @@
             addButton3.Text = "Add";
             addButton3.UseVisualStyleBackColor = true;
             // 
-            // partsLabel3
+            // AddPartsLabel3
             // 
-            partsLabel3.AutoSize = true;
-            partsLabel3.Location = new Point(619, 60);
-            partsLabel3.Name = "partsLabel3";
-            partsLabel3.Size = new Size(105, 15);
-            partsLabel3.TabIndex = 39;
-            partsLabel3.Text = "All candidate Parts";
+            AddPartsLabel3.AutoSize = true;
+            AddPartsLabel3.Location = new Point(619, 60);
+            AddPartsLabel3.Name = "AddPartsLabel3";
+            AddPartsLabel3.Size = new Size(105, 15);
+            AddPartsLabel3.TabIndex = 39;
+            AddPartsLabel3.Text = "All candidate AddParts";
             // 
-            // partsLabel4
+            // AddPartsLabel4
             // 
-            partsLabel4.AutoSize = true;
-            partsLabel4.Location = new Point(619, 371);
-            partsLabel4.Name = "partsLabel4";
-            partsLabel4.Size = new Size(186, 15);
-            partsLabel4.TabIndex = 40;
-            partsLabel4.Text = "Parts Associated with this Product";
+            AddPartsLabel4.AutoSize = true;
+            AddPartsLabel4.Location = new Point(619, 371);
+            AddPartsLabel4.Name = "AddPartsLabel4";
+            AddPartsLabel4.Size = new Size(186, 15);
+            AddPartsLabel4.TabIndex = 40;
+            AddPartsLabel4.Text = "AddParts Associated with this Product";
             // 
             // searchBox3
             // 
@@ -328,8 +328,8 @@
             ClientSize = new Size(1443, 750);
             Controls.Add(searchBox3);
             Controls.Add(searchButton3);
-            Controls.Add(partsLabel4);
-            Controls.Add(partsLabel3);
+            Controls.Add(AddPartsLabel4);
+            Controls.Add(AddPartsLabel3);
             Controls.Add(addButton3);
             Controls.Add(deleteButton3);
             Controls.Add(cancelButton3);
@@ -374,14 +374,14 @@
         private TextBox inventoryBox3;
         private TextBox nameBox3;
         private DataGridView dataGridView3;
-        private DataGridViewTextBoxColumn partID3;
+        private DataGridViewTextBoxColumn AddPartID3;
         private DataGridViewTextBoxColumn name3;
         private DataGridViewTextBoxColumn inventory3;
         private DataGridViewTextBoxColumn price3;
         private DataGridViewTextBoxColumn min3;
         private DataGridViewTextBoxColumn max3;
         private DataGridView dataGridView4;
-        private DataGridViewTextBoxColumn partID4;
+        private DataGridViewTextBoxColumn AddPartID4;
         private DataGridViewTextBoxColumn name4;
         private DataGridViewTextBoxColumn inventory4;
         private DataGridViewTextBoxColumn price4;
@@ -391,8 +391,8 @@
         private Button cancelButton3;
         private Button deleteButton3;
         private Button addButton3;
-        private Label partsLabel3;
-        private Label partsLabel4;
+        private Label AddPartsLabel3;
+        private Label AddPartsLabel4;
         private TextBox searchBox3;
         private Button searchButton3;
     }

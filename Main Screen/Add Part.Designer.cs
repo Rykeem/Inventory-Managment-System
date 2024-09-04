@@ -1,6 +1,6 @@
 ﻿namespace Main_Screen
 {
-    partial class Part
+    partial class AddPart
     {
         /// <summary>
         /// Required designer variable.
@@ -215,7 +215,7 @@
             idBox1.Size = new Size(135, 23);
             idBox1.TabIndex = 19;
             // 
-            // Part
+            // AddPart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -239,9 +239,9 @@
             Controls.Add(addPartLabel);
             Controls.Add(outsourcedButton);
             Controls.Add(houseButton);
-            Name = "Part";
-            Text = "Part";
-            Load += Part_Load;
+            Name = "AddPart";
+            Text = "AddPart";
+            Load += AddPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }

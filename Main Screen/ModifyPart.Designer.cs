@@ -1,6 +1,6 @@
 ﻿namespace Main_Screen
 {
-    partial class ModifyPart
+    partial class ModifyAddPart
     {
         /// <summary>
         /// Required designer variable.
@@ -188,7 +188,7 @@
             modifyPartLabel.Size = new Size(69, 15);
             modifyPartLabel.TabIndex = 22;
             modifyPartLabel.Text = "Modfiy Part";
-            modifyPartLabel.Click += addPartLabel_Click;
+            modifyPartLabel.Click += addAddPartLabel_Click;
             // 
             // outsourcedButton2
             // 
@@ -214,7 +214,7 @@
             houseButton2.UseVisualStyleBackColor = true;
             houseButton2.CheckedChanged += houseButton2_CheckedChanged;
             // 
-            // ModifyPart
+            // ModifyAddPart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -238,9 +238,9 @@
             Controls.Add(modifyPartLabel);
             Controls.Add(outsourcedButton2);
             Controls.Add(houseButton2);
-            Name = "ModifyPart";
-            Text = "ModifyPart";
-            Load += ModifyPart_Load;
+            Name = "ModifyAddPart";
+            Text = "ModifyAddPart";
+            Load += ModifyAddPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }
