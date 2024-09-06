@@ -43,12 +43,6 @@
             searchBox2 = new TextBox();
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();
-            AddPartID2 = new DataGridViewTextBoxColumn();
-            name2 = new DataGridViewTextBoxColumn();
-            inventory2 = new DataGridViewTextBoxColumn();
-            price2 = new DataGridViewTextBoxColumn();
-            min2 = new DataGridViewTextBoxColumn();
-            max2 = new DataGridViewTextBoxColumn();
             exitButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -82,15 +76,16 @@
             deleteButton1.TabIndex = 2;
             deleteButton1.Text = "Delete";
             deleteButton1.UseVisualStyleBackColor = true;
+            deleteButton1.Click += deleteButton1_Click;
             // 
             // AddPartsLabel
             // 
             AddPartsLabel.AutoSize = true;
             AddPartsLabel.Location = new Point(16, 101);
             AddPartsLabel.Name = "AddPartsLabel";
-            AddPartsLabel.Size = new Size(55, 15);
+            AddPartsLabel.Size = new Size(58, 15);
             AddPartsLabel.TabIndex = 3;
-            AddPartsLabel.Text = "AddParts";
+            AddPartsLabel.Text = "Add Parts";
             // 
             // productsLabel
             // 
@@ -173,51 +168,29 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(16, 140);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(644, 183);
             dataGridView1.TabIndex = 13;
             // 
             // dataGridView2
             // 
+            dataGridView2.AllowUserToAddRows = false;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { AddPartID2, name2, inventory2, price2, min2, max2 });
             dataGridView2.Location = new Point(717, 140);
+            dataGridView2.MultiSelect = false;
             dataGridView2.Name = "dataGridView2";
+            dataGridView2.ReadOnly = true;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView2.Size = new Size(644, 183);
             dataGridView2.TabIndex = 14;
-            // 
-            // AddPartID2
-            // 
-            AddPartID2.HeaderText = "Part ID";
-            AddPartID2.Name = "AddPartID2";
-            // 
-            // name2
-            // 
-            name2.HeaderText = "Name";
-            name2.Name = "name2";
-            // 
-            // inventory2
-            // 
-            inventory2.HeaderText = "Inventory";
-            inventory2.Name = "inventory2";
-            // 
-            // price2
-            // 
-            price2.HeaderText = "Price";
-            price2.Name = "price2";
-            // 
-            // min2
-            // 
-            min2.HeaderText = "Min";
-            min2.Name = "min2";
-            // 
-            // max2
-            // 
-            max2.HeaderText = "Max";
-            max2.Name = "max2";
+            dataGridView2.DataBindingComplete += myBindingComplete;
             // 
             // exitButton
             // 
@@ -276,12 +249,6 @@
         private TextBox searchBox2;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn AddPartID2;
-        private DataGridViewTextBoxColumn name2;
-        private DataGridViewTextBoxColumn inventory2;
-        private DataGridViewTextBoxColumn price2;
-        private DataGridViewTextBoxColumn min2;
-        private DataGridViewTextBoxColumn max2;
         private Button exitButton;
     }
 }

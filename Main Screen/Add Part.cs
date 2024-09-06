@@ -24,8 +24,10 @@ namespace Main_Screen
         {
             InitializeComponent();
             _inventory = inventory;
-            
-           
+            idBox1.Text = inventory._id1.ToString();
+            idBox1.ReadOnly = true;
+
+
         }
 
 
@@ -63,7 +65,7 @@ namespace Main_Screen
 
 
            
-            Form1.Instance?.UpdateGrid1(_inventory);
+           Form1.Instance?.UpdateGrid1(_inventory);
            this.Close();
            Form1.Instance?.Show();
 
@@ -74,7 +76,7 @@ namespace Main_Screen
         private void AddPart_Load(object sender, EventArgs e)
         {
        
-            idBox1.ReadOnly = true;
+            
             
         }
 

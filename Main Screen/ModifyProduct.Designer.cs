@@ -37,6 +37,12 @@
             cancelButton4 = new Button();
             saveButton4 = new Button();
             dataGridView5 = new DataGridView();
+            AddPartID5 = new DataGridViewTextBoxColumn();
+            name5 = new DataGridViewTextBoxColumn();
+            inventory5 = new DataGridViewTextBoxColumn();
+            price5 = new DataGridViewTextBoxColumn();
+            min5 = new DataGridViewTextBoxColumn();
+            max5 = new DataGridViewTextBoxColumn();
             idBox4 = new TextBox();
             maxLabel4 = new Label();
             minLabel4 = new Label();
@@ -51,12 +57,6 @@
             nameBox4 = new TextBox();
             modifyProductLabel = new Label();
             dataGridView6 = new DataGridView();
-            AddPartID5 = new DataGridViewTextBoxColumn();
-            name5 = new DataGridViewTextBoxColumn();
-            inventory5 = new DataGridViewTextBoxColumn();
-            price5 = new DataGridViewTextBoxColumn();
-            min5 = new DataGridViewTextBoxColumn();
-            max5 = new DataGridViewTextBoxColumn();
             AddPartID6 = new DataGridViewTextBoxColumn();
             name6 = new DataGridViewTextBoxColumn();
             inventory6 = new DataGridViewTextBoxColumn();
@@ -88,7 +88,7 @@
             AddPartsLabel4.AutoSize = true;
             AddPartsLabel4.Location = new Point(615, 367);
             AddPartsLabel4.Name = "AddPartsLabel4";
-            AddPartsLabel4.Size = new Size(186, 15);
+            AddPartsLabel4.Size = new Size(208, 15);
             AddPartsLabel4.TabIndex = 63;
             AddPartsLabel4.Text = "AddParts Associated with this Product";
             // 
@@ -97,7 +97,7 @@
             AddPartsLabel3.AutoSize = true;
             AddPartsLabel3.Location = new Point(615, 56);
             AddPartsLabel3.Name = "AddPartsLabel3";
-            AddPartsLabel3.Size = new Size(105, 15);
+            AddPartsLabel3.Size = new Size(127, 15);
             AddPartsLabel3.TabIndex = 62;
             AddPartsLabel3.Text = "All candidate AddParts";
             // 
@@ -139,12 +139,52 @@
             // 
             // dataGridView5
             // 
+            dataGridView5.AllowUserToAddRows = false;
             dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView5.Columns.AddRange(new DataGridViewColumn[] { AddPartID5, name5, inventory5, price5, min5, max5 });
             dataGridView5.Location = new Point(615, 88);
+            dataGridView5.MultiSelect = false;
             dataGridView5.Name = "dataGridView5";
+            dataGridView5.ReadOnly = true;
+            dataGridView5.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView5.Size = new Size(643, 183);
             dataGridView5.TabIndex = 56;
+            // 
+            // AddPartID5
+            // 
+            AddPartID5.HeaderText = "Part ID";
+            AddPartID5.Name = "AddPartID5";
+            AddPartID5.ReadOnly = true;
+            // 
+            // name5
+            // 
+            name5.HeaderText = "Name";
+            name5.Name = "name5";
+            name5.ReadOnly = true;
+            // 
+            // inventory5
+            // 
+            inventory5.HeaderText = "Inventory";
+            inventory5.Name = "inventory5";
+            inventory5.ReadOnly = true;
+            // 
+            // price5
+            // 
+            price5.HeaderText = "Price";
+            price5.Name = "price5";
+            price5.ReadOnly = true;
+            // 
+            // min5
+            // 
+            min5.HeaderText = "Min";
+            min5.Name = "min5";
+            min5.ReadOnly = true;
+            // 
+            // max5
+            // 
+            max5.HeaderText = "Max";
+            max5.Name = "max5";
+            max5.ReadOnly = true;
             // 
             // idBox4
             // 
@@ -254,72 +294,52 @@
             // 
             // dataGridView6
             // 
+            dataGridView6.AllowUserToAddRows = false;
             dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView6.Columns.AddRange(new DataGridViewColumn[] { AddPartID6, name6, inventory6, price6, min6, max6 });
             dataGridView6.Location = new Point(615, 398);
+            dataGridView6.MultiSelect = false;
             dataGridView6.Name = "dataGridView6";
+            dataGridView6.ReadOnly = true;
+            dataGridView6.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView6.Size = new Size(643, 183);
             dataGridView6.TabIndex = 57;
-            // 
-            // AddPartID5
-            // 
-            AddPartID5.HeaderText = "Part ID";
-            AddPartID5.Name = "AddPartID5";
-            // 
-            // name5
-            // 
-            name5.HeaderText = "Name";
-            name5.Name = "name5";
-            // 
-            // inventory5
-            // 
-            inventory5.HeaderText = "Inventory";
-            inventory5.Name = "inventory5";
-            // 
-            // price5
-            // 
-            price5.HeaderText = "Price";
-            price5.Name = "price5";
-            // 
-            // min5
-            // 
-            min5.HeaderText = "Min";
-            min5.Name = "min5";
-            // 
-            // max5
-            // 
-            max5.HeaderText = "Max";
-            max5.Name = "max5";
             // 
             // AddPartID6
             // 
             AddPartID6.HeaderText = "Part ID";
             AddPartID6.Name = "AddPartID6";
+            AddPartID6.ReadOnly = true;
             // 
             // name6
             // 
             name6.HeaderText = "Name";
             name6.Name = "name6";
+            name6.ReadOnly = true;
             // 
             // inventory6
             // 
             inventory6.HeaderText = "Inventory";
             inventory6.Name = "inventory6";
+            inventory6.ReadOnly = true;
             // 
             // price6
             // 
             price6.HeaderText = "Price";
             price6.Name = "price6";
+            price6.ReadOnly = true;
             // 
             // min6
             // 
             min6.HeaderText = "Min";
             min6.Name = "min6";
+            min6.ReadOnly = true;
             // 
             // max6
             // 
             max6.HeaderText = "Max";
             max6.Name = "max6";
+            max6.ReadOnly = true;
             // 
             // ModifyProduct
             // 

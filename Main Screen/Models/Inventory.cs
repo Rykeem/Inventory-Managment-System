@@ -9,32 +9,51 @@ namespace Main_Screen.Models
 {
     public class Inventory 
     {
-        private int _id1;
-            public BindingList<Product> Products { get; set; } // products grid
+        public int _id1;
+        List<int> idCounterUsed = new List<int>();
+        List<int> idCounterAvailable = new List<int>();
+        
+
+
+
+        public BindingList<Product> Products { get; set; } // products grid
             public BindingList<Part> AllParts { get; set; } // parts grid
 
-      
-       
-       
-            public Inventory()
-            {
-            //AllParts = new BindingList<Part>();
+
+
+
+        public Inventory()
+        {
+            AllParts = new BindingList<Part>();
             Products = new BindingList<Product>();
             _id1 = 0;
-;
-            }
+
+           
+        }
 
         public void addPart(Part part)
         {
-            if (AllParts == null)
-            {
-                
-                AllParts = new BindingList<Part>();
-            }
-            part.PartID = _id1++;
-            AllParts.Add(part);
 
+            AllParts.Add(part);
+            part.PartID = _id1;
+            _id1++;
+            
+            
+            
         }
+        public bool deletePart(Part part)
+        {
+            
+
+            if (AllParts.Contains(part))
+            { 
+                AllParts.Remove(part);
+           
+            }
+
+            return false;
+        }
+       
     }
 
 
@@ -69,8 +88,7 @@ namespace Main_Screen.Models
 
         }
 
-        public bool deleteAddPart(AddPart)
-        { }
+        
 
         public AddPart lookupAddPart(int)
         { }

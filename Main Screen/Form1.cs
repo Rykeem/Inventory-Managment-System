@@ -7,16 +7,16 @@ namespace Main_Screen
     public partial class Form1 : Form
     {
         private Inventory _inventory;
-       
+
         public static Form1 Instance { get; set; }
         public Form1()
         {
             InitializeComponent();
-            Instance = this;    
+            Instance = this;
             _inventory = new Inventory();
-            
+
         }
-        public void UpdateGrid1(Inventory inventory )
+        public void UpdateGrid1(Inventory inventory)
         {
 
             _inventory = inventory;
@@ -38,7 +38,7 @@ namespace Main_Screen
 
         private void addButton1_Click(object sender, EventArgs e)
         {
-            
+
             AddPart AddPart = new AddPart(_inventory);
             AddPart.Show();
             this.Hide();
@@ -49,7 +49,7 @@ namespace Main_Screen
             AddProduct AddPart = new AddProduct();
             AddPart.Show();
             this.Hide();
-            
+
         }
 
         private void modifyButton1_Click(object sender, EventArgs e)
@@ -67,6 +67,31 @@ namespace Main_Screen
         {
             ModifyProduct AddPart = new ModifyProduct();
             AddPart.Show();
+        }
+
+        private void myBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.ClearSelection();
+        }
+
+        private void deleteButton1_Click(object sender, EventArgs e)
+        {
+
+            
+            if (dataGridView1.CurrentRow == null || !dataGridView1.CurrentRow.Selected)
+            {
+                MessageBox.Show("Nothing Is Selected");
+                return;
+            }
+            
+            int Index = dataGridView1.CurrentCell.RowIndex;
+
+            //_inventory.AllParts.RemoveAt(Index);
+            Part part = _inventory.AllParts[Index];
+           _inventory.deletePart(part);
+            
+
+
         }
     }
 
