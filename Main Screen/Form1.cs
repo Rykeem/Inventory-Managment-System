@@ -49,13 +49,28 @@ namespace Main_Screen
             AddProduct AddPart = new AddProduct();
             AddPart.Show();
             this.Hide();
+           
 
         }
 
         private void modifyButton1_Click(object sender, EventArgs e)
         {
-            ModifyAddPart AddPart = new ModifyAddPart();
+            
+            
+            
+            if (dataGridView1.CurrentRow == null || !dataGridView1.CurrentRow.Selected)
+            {
+                MessageBox.Show("Nothing Is Selected");
+                return;
+            }
+            int Index = dataGridView1.CurrentCell.RowIndex;
+
+
+            Part part = _inventory.AllParts[Index];
+            ModifyPart AddPart = new ModifyPart(Index,part,_inventory);
             AddPart.Show();
+            this.Hide();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

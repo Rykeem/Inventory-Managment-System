@@ -53,7 +53,12 @@ namespace Main_Screen.Models
 
             return false;
         }
-       
+        public void updatePart(int index, Part part)
+        {
+        AllParts[index] = part;
+        }
+        //public Part lookupPart(int)
+        //{ }
     }
 
 
@@ -90,11 +95,9 @@ namespace Main_Screen.Models
 
         
 
-        public AddPart lookupAddPart(int)
-        { }
+        
 
-        public void updateAddPart(int, AddPart)
-        { }
+        
         */
 }
 

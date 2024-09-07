@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Main_Screen.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +11,22 @@ using System.Windows.Forms;
 
 namespace Main_Screen
 {
-    public partial class ModifyAddPart : Form
+    public partial class ModifyPart : Form
     {
-        int autoID = 0;
-        public ModifyAddPart()
+        private Inventory _inventory;
+        private int _index;
+        public ModifyPart(int index, Part part, Inventory inventory)
         {
             InitializeComponent();
-            ;
+            _inventory = inventory;
+            idBox2.ReadOnly = true;
+            idBox2.Text = part.PartID.ToString() ;
+            nameBox2.Text = part.Name;
+            inventoryBox2.Text = part.InStock.ToString();
+            priceBox2.Text = part.Price.ToString();
+            maxBox2.Text = part.Max.ToString();
+            minBox2.Text = part.Min.ToString();
+            this._index = index;
         }
 
         private void addAddPartLabel_Click(object sender, EventArgs e)
@@ -36,9 +46,27 @@ namespace Main_Screen
 
         private void ModifyAddPart_Load(object sender, EventArgs e)
         {
-            idBox2.Text = autoID.ToString();
-            idBox2.ReadOnly = true;
-            autoID++;
+
+
+        }
+
+        private void saveButton2_Click(object sender, EventArgs e)
+        {
+            Part tempPart = new TempPart(
+               int.Parse(idBox2.Text),
+               nameBox2.Text,
+               int.Parse(inventoryBox2.Text),
+               decimal.Parse(priceBox2.Text),
+               int.Parse(maxBox2.Text),
+               int.Parse(minBox2.Text)
+           );
+            
+             
+            _inventory.updatePart(_index, tempPart);
+           
+            this.Close();
+            Form1.Instance?.Show();
+
         }
     }
 }
