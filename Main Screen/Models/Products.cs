@@ -17,16 +17,23 @@ namespace Main_Screen.Models
         public int Max { get; set; }
         public int Min { get; set; }
         public BindingList<Part> AssociatedParts { get; set; }
-        
-        public static BindingList<Part> productgrid = new BindingList<Part>();
 
-        static Product()
+        public Product()
         {
-           // productgrid.Add(PartID = 1, Name = "Pencil", Price = 111, InStock = 11, Max = 5, Min = 3  );
+           AssociatedParts = new BindingList<Part>(); 
         }
 
-        /*public void addAssociatedPart(AddPart AddPart)
-        { }
+        public void addAssociatedPart(Part Part)
+        { AssociatedParts.Add(Part); 
+        }
+        
+
+
+
+
+
+
+        /*
         public bool removeAssociatedPart(int)
         { }
         public Part lookupAssociatedPart(int)

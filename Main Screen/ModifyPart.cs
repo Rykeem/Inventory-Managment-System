@@ -26,7 +26,19 @@ namespace Main_Screen
             priceBox2.Text = part.Price.ToString();
             maxBox2.Text = part.Max.ToString();
             minBox2.Text = part.Min.ToString();
+
             this._index = index;
+
+            if (part is Inhouse)
+            {
+                houseButton2.Checked = true;
+                idorcompanyBox2.Text = ((Inhouse)part).MachineID.ToString();
+            }
+            else if (part is Outsourced)
+            {
+                outsourcedButton2.Checked = true;
+                idorcompanyBox2.Text = ((Outsourced)part).CompanyName;
+            }
         }
 
         private void addAddPartLabel_Click(object sender, EventArgs e)
@@ -36,12 +48,19 @@ namespace Main_Screen
 
         private void houseButton2_CheckedChanged(object sender, EventArgs e)
         {
-            companyoridlabel2.Text = "MachineID";
+            if (houseButton2.Checked)
+            {
+                companyoridlabel2.Text = "MachineID";
+            }
+
         }
 
         private void outsourcedButton2_CheckedChanged(object sender, EventArgs e)
         {
-            companyoridlabel2.Text = "CompanyName";
+                if (outsourcedButton2.Checked)
+                {
+                    companyoridlabel2.Text = "CompanyName";
+                }
         }
 
         private void ModifyAddPart_Load(object sender, EventArgs e)
@@ -51,19 +70,46 @@ namespace Main_Screen
         }
 
         private void saveButton2_Click(object sender, EventArgs e)
-        {
-            Part tempPart = new TempPart(
-               int.Parse(idBox2.Text),
-               nameBox2.Text,
-               int.Parse(inventoryBox2.Text),
-               decimal.Parse(priceBox2.Text),
-               int.Parse(maxBox2.Text),
-               int.Parse(minBox2.Text)
-           );
             
-             
-            _inventory.updatePart(_index, tempPart);
+        {
            
+            if (companyoridlabel2.Text == "MachineID")
+            {
+                Inhouse tempPart = new Inhouse(
+                    int.Parse(idBox2.Text),
+                    nameBox2.Text,
+                    int.Parse(inventoryBox2.Text),
+                    decimal.Parse(priceBox2.Text),
+                    int.Parse(minBox2.Text),
+                    int.Parse(maxBox2.Text),
+                    int.Parse(idorcompanyBox2.Text)
+                    );
+
+
+                _inventory.updatePart(_index, tempPart);
+
+            }
+            else if (companyoridlabel2.Text == "CompanyName")
+            {
+                Outsourced tempPart = new Outsourced(
+                    int.Parse(idBox2.Text),
+                    nameBox2.Text,
+                    int.Parse(inventoryBox2.Text),
+                    decimal.Parse(priceBox2.Text),
+                    int.Parse(minBox2.Text),
+                    int.Parse(maxBox2.Text),
+                    (idorcompanyBox2.Text)
+                    );
+
+
+                _inventory.updatePart(_index, tempPart);
+            }
+
+
+
+
+            //_inventory.updatePart(_index, tempPart);
+
             this.Close();
             Form1.Instance?.Show();
 

@@ -42,19 +42,7 @@
             inventoryBox3 = new TextBox();
             nameBox3 = new TextBox();
             dataGridView3 = new DataGridView();
-            AddPartID3 = new DataGridViewTextBoxColumn();
-            name3 = new DataGridViewTextBoxColumn();
-            inventory3 = new DataGridViewTextBoxColumn();
-            price3 = new DataGridViewTextBoxColumn();
-            min3 = new DataGridViewTextBoxColumn();
-            max3 = new DataGridViewTextBoxColumn();
             dataGridView4 = new DataGridView();
-            AddPartID4 = new DataGridViewTextBoxColumn();
-            name4 = new DataGridViewTextBoxColumn();
-            inventory4 = new DataGridViewTextBoxColumn();
-            price4 = new DataGridViewTextBoxColumn();
-            min4 = new DataGridViewTextBoxColumn();
-            max4 = new DataGridViewTextBoxColumn();
             saveButton3 = new Button();
             cancelButton3 = new Button();
             deleteButton3 = new Button();
@@ -176,80 +164,24 @@
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { AddPartID3, name3, inventory3, price3, min3, max3 });
             dataGridView3.Location = new Point(619, 92);
+            dataGridView3.MultiSelect = false;
             dataGridView3.Name = "dataGridView3";
+            dataGridView3.ReadOnly = true;
+            dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView3.Size = new Size(643, 183);
             dataGridView3.TabIndex = 32;
-            // 
-            // AddPartID3
-            // 
-            AddPartID3.HeaderText = "Part ID";
-            AddPartID3.Name = "AddPartID3";
-            // 
-            // name3
-            // 
-            name3.HeaderText = "Name";
-            name3.Name = "name3";
-            // 
-            // inventory3
-            // 
-            inventory3.HeaderText = "Inventory";
-            inventory3.Name = "inventory3";
-            // 
-            // price3
-            // 
-            price3.HeaderText = "Price";
-            price3.Name = "price3";
-            // 
-            // min3
-            // 
-            min3.HeaderText = "Min";
-            min3.Name = "min3";
-            // 
-            // max3
-            // 
-            max3.HeaderText = "Max";
-            max3.Name = "max3";
             // 
             // dataGridView4
             // 
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { AddPartID4, name4, inventory4, price4, min4, max4 });
             dataGridView4.Location = new Point(619, 402);
+            dataGridView4.MultiSelect = false;
             dataGridView4.Name = "dataGridView4";
+            dataGridView4.ReadOnly = true;
+            dataGridView4.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView4.Size = new Size(643, 183);
             dataGridView4.TabIndex = 33;
-            // 
-            // AddPartID4
-            // 
-            AddPartID4.HeaderText = "Part ID";
-            AddPartID4.Name = "AddPartID4";
-            // 
-            // name4
-            // 
-            name4.HeaderText = "Name";
-            name4.Name = "name4";
-            // 
-            // inventory4
-            // 
-            inventory4.HeaderText = "Inventory";
-            inventory4.Name = "inventory4";
-            // 
-            // price4
-            // 
-            price4.HeaderText = "Price";
-            price4.Name = "price4";
-            // 
-            // min4
-            // 
-            min4.HeaderText = "Min";
-            min4.Name = "min4";
-            // 
-            // max4
-            // 
-            max4.HeaderText = "Max";
-            max4.Name = "max4";
             // 
             // saveButton3
             // 
@@ -259,6 +191,7 @@
             saveButton3.TabIndex = 35;
             saveButton3.Text = "Save";
             saveButton3.UseVisualStyleBackColor = true;
+            saveButton3.Click += saveButton3_Click;
             // 
             // cancelButton3
             // 
@@ -268,6 +201,7 @@
             cancelButton3.TabIndex = 36;
             cancelButton3.Text = "Cancel";
             cancelButton3.UseVisualStyleBackColor = true;
+            cancelButton3.Click += cancelButton3_Click;
             // 
             // deleteButton3
             // 
@@ -286,6 +220,7 @@
             addButton3.TabIndex = 38;
             addButton3.Text = "Add";
             addButton3.UseVisualStyleBackColor = true;
+            addButton3.Click += addButton3_Click;
             // 
             // AddPartsLabel3
             // 
@@ -294,7 +229,7 @@
             AddPartsLabel3.Name = "AddPartsLabel3";
             AddPartsLabel3.Size = new Size(105, 15);
             AddPartsLabel3.TabIndex = 39;
-            AddPartsLabel3.Text = "All candidate AddParts";
+            AddPartsLabel3.Text = "All candidate Parts";
             // 
             // AddPartsLabel4
             // 
@@ -303,7 +238,7 @@
             AddPartsLabel4.Name = "AddPartsLabel4";
             AddPartsLabel4.Size = new Size(186, 15);
             AddPartsLabel4.TabIndex = 40;
-            AddPartsLabel4.Text = "AddParts Associated with this Product";
+            AddPartsLabel4.Text = "Parts Associated with this Product";
             // 
             // searchBox3
             // 
@@ -374,19 +309,7 @@
         private TextBox inventoryBox3;
         private TextBox nameBox3;
         private DataGridView dataGridView3;
-        private DataGridViewTextBoxColumn AddPartID3;
-        private DataGridViewTextBoxColumn name3;
-        private DataGridViewTextBoxColumn inventory3;
-        private DataGridViewTextBoxColumn price3;
-        private DataGridViewTextBoxColumn min3;
-        private DataGridViewTextBoxColumn max3;
         private DataGridView dataGridView4;
-        private DataGridViewTextBoxColumn AddPartID4;
-        private DataGridViewTextBoxColumn name4;
-        private DataGridViewTextBoxColumn inventory4;
-        private DataGridViewTextBoxColumn price4;
-        private DataGridViewTextBoxColumn min4;
-        private DataGridViewTextBoxColumn max4;
         private Button saveButton3;
         private Button cancelButton3;
         private Button deleteButton3;

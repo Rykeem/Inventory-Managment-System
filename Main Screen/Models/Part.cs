@@ -15,34 +15,23 @@ namespace Main_Screen.Models
         public int Max { get; set; }
         public int Min { get; set; }
 
-        //constructor
+        private string _type; // which button is clicked 
+        private string _machineorcompany;
 
 
-        /*public Part(int partID, string name,  int inStock, decimal price, int min, int max)
+        public string Type
         {
-            PartID = partID;
-            Name = name;
-            Price = price;
-            InStock = inStock;
-            Max = max;
-            Min = min;
-        }*/
-
-    }
-
-    public class TempPart : Part
-    {
-        public TempPart(int partID, string name, int inStock, decimal price, int min, int max)
+            get { return _type; }
+            set { _type = value; }
+        }
+        public string MachineOrCompany
         {
-            PartID = partID;
-            Name = name;
-            Price = price;
-            InStock = inStock;
-            Max = max;
-            Min = min;
+            get { return _machineorcompany; }
+            set { _machineorcompany = value; }
+
         }
 
-
+       
     }
 }
     

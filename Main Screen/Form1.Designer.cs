@@ -142,6 +142,7 @@
             searchButton1.TabIndex = 9;
             searchButton1.Text = "Search";
             searchButton1.UseVisualStyleBackColor = true;
+            searchButton1.Click += searchButton1_Click;
             // 
             // searchButton2
             // 

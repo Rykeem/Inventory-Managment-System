@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Main_Screen.Models
 {
-    public class Inventory 
+    public class Inventory
     {
         public int _id1;
-        List<int> idCounterUsed = new List<int>();
-        List<int> idCounterAvailable = new List<int>();
+        public int _id2;
         
 
 
 
+
         public BindingList<Product> Products { get; set; } // products grid
-            public BindingList<Part> AllParts { get; set; } // parts grid
+        public BindingList<Part> AllParts { get; set; } // parts grid
 
 
 
@@ -27,8 +27,9 @@ namespace Main_Screen.Models
             AllParts = new BindingList<Part>();
             Products = new BindingList<Product>();
             _id1 = 0;
+            _id1 = 0;
 
-           
+
         }
 
         public void addPart(Part part)
@@ -37,67 +38,74 @@ namespace Main_Screen.Models
             AllParts.Add(part);
             part.PartID = _id1;
             _id1++;
-            
-            
-            
+
+
+
+        }
+        public void AddProduct(Product product) //add products to binding list
+        {
+            Products.Add(product);
+            product.ProductID = _id2;
+            _id2++;
         }
         public bool deletePart(Part part)
         {
-            
+
 
             if (AllParts.Contains(part))
-            { 
+            {
                 AllParts.Remove(part);
-           
+
             }
 
             return false;
         }
+        /* public bool removeProduct(int) //removing product from binding list
+         {
+             Products.RemoveAt(int);
+             return false;
+         }*/
         public void updatePart(int index, Part part)
         {
-        AllParts[index] = part;
+            AllParts[index] = part;
         }
-        //public Part lookupPart(int)
-        //{ }
+        public void updateProduct(int index, Product product)
+        {
+            Products[index] = product;
+        }
+        public Part LookupPart(int ID, DataGridView dataGridView)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells["PartID"].Value != null)
+                {
+                    int tempVal;
+                    if (int.TryParse(row.Cells["PartID"].Value.ToString(), out tempVal))
+                    {
+                        if (ID == tempVal)
+                        { row.Selected = true; }
+
+                    }
+                }
+            };
+            return null;
+        }
+
+        public Product lookupProduct(int ID, DataGridView dataGridView)
+        {
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                int tempVal;
+                if (int.TryParse(row.Cells["PartID"].Value.ToString(), out tempVal))
+                {
+                    if (ID == tempVal)
+                    {
+                        row.Selected = true;
+                    }
+                }
+            };
+            return null;
+        }
     }
-
-
-
-
-
-
-
-
-
-
-        /*public void AddProduct(Product) //add products to binding list
-        {
-
-        }
-
-        public bool removeProduct(int) //removing product from binding list
-        {
-            return false;
-        }
-
-        public Product lookupProduct(int)
-        {
-        }
-
-        public void updateProduct(int, Product)
-        {
-        }
-
-        public void addAddPart(AddPart)
-        {
-
-        }
-
-        
-
-        
-
-        
-        */
 }
 

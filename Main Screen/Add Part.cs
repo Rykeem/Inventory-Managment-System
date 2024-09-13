@@ -47,25 +47,38 @@ namespace Main_Screen
 
         public void saveButton_Click(object sender, EventArgs e) 
         {
-
             
-            
-    
-            Part tempPart = new TempPart(
+            if (companyoridlabel.Text == "MachineID")
+            {
+                Inhouse tempPart = new Inhouse(
                 0,
                 nameBox.Text,
                 int.Parse(inventoryBox.Text),
                 decimal.Parse(priceBox.Text),
                 int.Parse(minBox.Text),
-                int.Parse(maxBox.Text)
-            );
-            _inventory.addPart(tempPart);
+                int.Parse(maxBox.Text),
+                int.Parse(idorcompanyBox.Text))
+                ;
+                _inventory.addPart(tempPart);
+            }
+            else if (companyoridlabel.Text == "CompanyName")
+            {
+                Outsourced tempPart = new Outsourced(
+                0,
+                nameBox.Text,
+                int.Parse(inventoryBox.Text),
+                decimal.Parse(priceBox.Text),
+                int.Parse(minBox.Text),
+                int.Parse(maxBox.Text),
+                idorcompanyBox.Text
+                );
+                _inventory.addPart(tempPart);
+            }
+
             
 
 
-
-           
-           Form1.Instance?.UpdateGrid1(_inventory);
+            Form1.Instance?.UpdateGrid1(_inventory);
            this.Close();
            Form1.Instance?.Show();
 
