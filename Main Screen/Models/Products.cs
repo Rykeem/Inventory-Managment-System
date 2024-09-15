@@ -18,13 +18,27 @@ namespace Main_Screen.Models
         public int Min { get; set; }
         public BindingList<Part> AssociatedParts { get; set; }
 
-        public Product()
+
+        public Product() 
+        { AssociatedParts = new BindingList<Part>(); }
+        public Product(BindingList<Part> part, int productid, string name, int instock, decimal price, int min, int max)
         {
-           AssociatedParts = new BindingList<Part>(); 
+            AssociatedParts = new BindingList<Part>(part);
+            ProductID = productid;
+            Name = name;
+            Price = price;
+            InStock = instock;
+            Min = min;
+            Max = max;
+
+
+
+
+
         }
 
-        public void addAssociatedPart(Part Part)
-        { AssociatedParts.Add(Part); 
+        public void addAssociatedPart(Part part) //adds to other product datagrid 
+        { AssociatedParts.Add(part); 
         }
         
 

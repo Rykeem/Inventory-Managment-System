@@ -28,6 +28,7 @@ namespace Main_Screen
             dataGridView1.Refresh();
             dataGridView2.DataSource = null;
             dataGridView2.DataSource = _inventory.Products;
+            dataGridView2.Refresh();
             HideRows();
         }
 
@@ -100,8 +101,25 @@ namespace Main_Screen
 
         private void modifyButton2_Click(object sender, EventArgs e)
         {
-            ModifyProduct AddPart = new ModifyProduct();
-            AddPart.Show();
+            
+            
+            if (dataGridView2.CurrentRow == null || !dataGridView2.CurrentRow.Selected)
+            {
+                MessageBox.Show("Nothing Is Selected");
+                return;
+            }
+            int Index = dataGridView2.CurrentCell.RowIndex;
+
+
+            Product product = _inventory.Products[Index];
+            if (product.AssociatedParts.Count == 0)
+            {
+                MessageBox.Show("empty box");
+            }
+            ModifyProduct modifyProduct = new ModifyProduct(Index, product, _inventory);
+            modifyProduct.Show();
+
+            this.Hide();
         }
 
         private void myBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

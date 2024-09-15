@@ -13,6 +13,7 @@ namespace Main_Screen
 {
     public partial class AddProduct : Form
     {
+     
         private Inventory _inventory;
         private Product _product;
         private BindingList<Part> _tempList;
@@ -56,7 +57,7 @@ namespace Main_Screen
 
                 dataGridView4.Refresh();
 
-                //ModifyPart AddPart = new ModifyPart(Index, part, _inventory);
+                
             }
         }
 
@@ -72,13 +73,37 @@ namespace Main_Screen
 
         private void saveButton3_Click(object sender, EventArgs e)
         {
-            //_product.AssociatedParts = _tempList;
-            
-
             foreach (Part part in _tempList)
             {
-                _product.addAssociatedPart(part);
+                _product.addAssociatedPart(part); // adds each row to binding list
             }
+
+
+           
+            {
+                Product tempPart = new Product(
+                _product.AssociatedParts,
+                0,// id 
+                nameBox3.Text,//name 
+                int.Parse(inventoryBox3.Text),// inventory
+                decimal.Parse(priceBox3.Text),//price
+                int.Parse(minBox3.Text),//min
+                int.Parse(maxBox3.Text)// max
+                // max
+                );
+
+                _inventory.AddProduct(tempPart);
+
+                
+               
+
+
+               
+            }
+           
+            
+            
+            Form1.Instance.UpdateGrid1(_inventory);
             this.Close();
             Form1.Instance?.Show();
         }

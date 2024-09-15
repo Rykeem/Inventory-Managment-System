@@ -108,7 +108,7 @@ namespace Main_Screen
 
 
 
-            //_inventory.updatePart(_index, tempPart);
+           
 
             this.Close();
             Form1.Instance?.Show();

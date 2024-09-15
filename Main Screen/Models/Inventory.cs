@@ -47,6 +47,8 @@ namespace Main_Screen.Models
             Products.Add(product);
             product.ProductID = _id2;
             _id2++;
+            
+            
         }
         public bool deletePart(Part part)
         {
