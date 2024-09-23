@@ -72,6 +72,7 @@
             idorcompanyBox2.Name = "idorcompanyBox2";
             idorcompanyBox2.Size = new Size(135, 23);
             idorcompanyBox2.TabIndex = 36;
+            idorcompanyBox2.TextChanged += idorcompanyBox2_TextChanged;
             // 
             // cancelButton2
             // 
@@ -81,6 +82,7 @@
             cancelButton2.TabIndex = 35;
             cancelButton2.Text = "Cancel";
             cancelButton2.UseVisualStyleBackColor = true;
+            cancelButton2.Click += cancelButton2_Click;
             // 
             // saveButton2
             // 
@@ -116,6 +118,7 @@
             minBox2.Name = "minBox2";
             minBox2.Size = new Size(69, 23);
             minBox2.TabIndex = 31;
+            minBox2.TextChanged += minBox2_TextChanged;
             // 
             // maxBox2
             // 
@@ -123,15 +126,16 @@
             maxBox2.Name = "maxBox2";
             maxBox2.Size = new Size(69, 23);
             maxBox2.TabIndex = 30;
+            maxBox2.TextChanged += maxBox2_TextChanged;
             // 
             // priceLabel2
             // 
             priceLabel2.AutoSize = true;
             priceLabel2.Location = new Point(40, 208);
             priceLabel2.Name = "priceLabel2";
-            priceLabel2.Size = new Size(68, 15);
+            priceLabel2.Size = new Size(62, 15);
             priceLabel2.TabIndex = 29;
-            priceLabel2.Text = "Price / Cost";
+            priceLabel2.Text = "Price/Cost";
             // 
             // inventoryLabel2
             // 
@@ -166,6 +170,7 @@
             priceBox2.Name = "priceBox2";
             priceBox2.Size = new Size(135, 23);
             priceBox2.TabIndex = 25;
+            priceBox2.TextChanged += priceBox2_TextChanged;
             // 
             // inventoryBox2
             // 
@@ -173,6 +178,7 @@
             inventoryBox2.Name = "inventoryBox2";
             inventoryBox2.Size = new Size(135, 23);
             inventoryBox2.TabIndex = 24;
+            inventoryBox2.TextChanged += inventoryBox2_TextChanged;
             // 
             // nameBox2
             // 
@@ -180,6 +186,7 @@
             nameBox2.Name = "nameBox2";
             nameBox2.Size = new Size(135, 23);
             nameBox2.TabIndex = 23;
+            nameBox2.TextChanged += nameBox2_TextChanged;
             // 
             // modifyPartLabel
             // 

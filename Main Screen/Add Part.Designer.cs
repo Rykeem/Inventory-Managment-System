@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             houseButton = new RadioButton();
             outsourcedButton = new RadioButton();
             addPartLabel = new Label();
@@ -48,6 +49,13 @@
             idorcompanyBox = new TextBox();
             companyoridlabel = new Label();
             idBox1 = new TextBox();
+            toolTip1 = new ToolTip(components);
+            toolTip2 = new ToolTip(components);
+            toolTip3 = new ToolTip(components);
+            toolTip4 = new ToolTip(components);
+            toolTip5 = new ToolTip(components);
+            toolTip6 = new ToolTip(components);
+            toolTip7 = new ToolTip(components);
             SuspendLayout();
             // 
             // houseButton
@@ -89,6 +97,7 @@
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(135, 23);
             nameBox.TabIndex = 4;
+            nameBox.TextChanged += nameBox_TextChanged;
             // 
             // priceBox
             // 
@@ -96,6 +105,7 @@
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(135, 23);
             priceBox.TabIndex = 6;
+            priceBox.TextChanged += priceBox_TextChanged;
             // 
             // inventoryBox
             // 
@@ -103,6 +113,7 @@
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(135, 23);
             inventoryBox.TabIndex = 5;
+            inventoryBox.TextChanged += inventoryBox_TextChanged;
             // 
             // idLabel
             // 
@@ -136,9 +147,9 @@
             priceLabel.AutoSize = true;
             priceLabel.Location = new Point(43, 200);
             priceLabel.Name = "priceLabel";
-            priceLabel.Size = new Size(68, 15);
+            priceLabel.Size = new Size(62, 15);
             priceLabel.TabIndex = 10;
-            priceLabel.Text = "Price / Cost";
+            priceLabel.Text = "Price/Cost";
             // 
             // maxBox
             // 
@@ -146,6 +157,7 @@
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(69, 23);
             maxBox.TabIndex = 11;
+            maxBox.TextChanged += maxBox_TextChanged;
             // 
             // minBox
             // 
@@ -153,6 +165,7 @@
             minBox.Name = "minBox";
             minBox.Size = new Size(69, 23);
             minBox.TabIndex = 12;
+            minBox.TextChanged += minBox_TextChanged;
             // 
             // minLabel
             // 
@@ -190,6 +203,7 @@
             cancelButton.TabIndex = 16;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += cancelButton_Click;
             // 
             // idorcompanyBox
             // 
@@ -197,6 +211,7 @@
             idorcompanyBox.Name = "idorcompanyBox";
             idorcompanyBox.Size = new Size(135, 23);
             idorcompanyBox.TabIndex = 17;
+            idorcompanyBox.TextChanged += idorcompanyBox_TextChanged;
             // 
             // companyoridlabel
             // 
@@ -269,5 +284,12 @@
         private TextBox idorcompanyBox;
         private Label companyoridlabel;
         private TextBox idBox1;
+        private ToolTip toolTip1;
+        private ToolTip toolTip2;
+        private ToolTip toolTip3;
+        private ToolTip toolTip4;
+        private ToolTip toolTip5;
+        private ToolTip toolTip6;
+        private ToolTip toolTip7;
     }
 }

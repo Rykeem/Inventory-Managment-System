@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Main_Screen.Models
 {
@@ -40,19 +41,40 @@ namespace Main_Screen.Models
         public void addAssociatedPart(Part part) //adds to other product datagrid 
         { AssociatedParts.Add(part); 
         }
+
+
+        public bool removeAssociatedPart(int partID, BindingList<Part> partList)
+        {
+            
+            partList.RemoveAt(partID);
+            
+            
+            
+            
+            return false;
+        }
         
+        public Part lookupAssociatedPart(int ID, DataGridView dataGridView)
+        {
 
-
-
-
-
-
-        /*
-        public bool removeAssociatedPart(int)
-        { }
-        public Part lookupAssociatedPart(int)
-        { }
-        */
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (row.Cells["PartID"].Value != null)
+                {
+                    int tempVal;
+                    bool susscess = false;
+                    if (int.TryParse(row.Cells["PartID"].Value.ToString(), out tempVal))
+                    {
+                        if (ID == tempVal)
+                        { row.Selected = true; }
+                        else if (!susscess)
+                        { MessageBox.Show("Item not found"); }
+                    }
+                }
+            };
+            return null;
+        }
+        
     }
 
 }

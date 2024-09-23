@@ -96,6 +96,7 @@
             minBox3.Name = "minBox3";
             minBox3.Size = new Size(69, 23);
             minBox3.TabIndex = 28;
+            minBox3.TextChanged += minBox3_TextChanged;
             // 
             // maxBox3
             // 
@@ -103,6 +104,7 @@
             maxBox3.Name = "maxBox3";
             maxBox3.Size = new Size(69, 23);
             maxBox3.TabIndex = 27;
+            maxBox3.TextChanged += maxBox3_TextChanged;
             // 
             // priceLabel3
             // 
@@ -146,6 +148,7 @@
             priceBox3.Name = "priceBox3";
             priceBox3.Size = new Size(135, 23);
             priceBox3.TabIndex = 22;
+            priceBox3.TextChanged += priceBox3_TextChanged;
             // 
             // inventoryBox3
             // 
@@ -153,6 +156,7 @@
             inventoryBox3.Name = "inventoryBox3";
             inventoryBox3.Size = new Size(135, 23);
             inventoryBox3.TabIndex = 21;
+            inventoryBox3.TextChanged += inventoryBox3_TextChanged;
             // 
             // nameBox3
             // 
@@ -160,6 +164,7 @@
             nameBox3.Name = "nameBox3";
             nameBox3.Size = new Size(135, 23);
             nameBox3.TabIndex = 20;
+            nameBox3.TextChanged += nameBox3_TextChanged;
             // 
             // dataGridView3
             // 
@@ -211,6 +216,7 @@
             deleteButton3.TabIndex = 37;
             deleteButton3.Text = "Delete";
             deleteButton3.UseVisualStyleBackColor = true;
+            deleteButton3.Click += deleteButton3_Click;
             // 
             // addButton3
             // 
@@ -255,6 +261,7 @@
             searchButton3.TabIndex = 41;
             searchButton3.Text = "Search";
             searchButton3.UseVisualStyleBackColor = true;
+            searchButton3.Click += searchButton3_Click;
             // 
             // AddProduct
             // 

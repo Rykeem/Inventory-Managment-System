@@ -31,7 +31,7 @@
             addButton1 = new Button();
             modifyButton1 = new Button();
             deleteButton1 = new Button();
-            AddPartsLabel = new Label();
+            PartsLabel = new Label();
             productsLabel = new Label();
             InventoryManagmentLabel = new Label();
             modifyButton2 = new Button();
@@ -78,14 +78,14 @@
             deleteButton1.UseVisualStyleBackColor = true;
             deleteButton1.Click += deleteButton1_Click;
             // 
-            // AddPartsLabel
+            // PartsLabel
             // 
-            AddPartsLabel.AutoSize = true;
-            AddPartsLabel.Location = new Point(16, 101);
-            AddPartsLabel.Name = "AddPartsLabel";
-            AddPartsLabel.Size = new Size(58, 15);
-            AddPartsLabel.TabIndex = 3;
-            AddPartsLabel.Text = "Add Parts";
+            PartsLabel.AutoSize = true;
+            PartsLabel.Location = new Point(16, 101);
+            PartsLabel.Name = "PartsLabel";
+            PartsLabel.Size = new Size(33, 15);
+            PartsLabel.TabIndex = 3;
+            PartsLabel.Text = "Parts";
             // 
             // productsLabel
             // 
@@ -133,6 +133,7 @@
             deleteButton2.TabIndex = 8;
             deleteButton2.Text = "Delete";
             deleteButton2.UseVisualStyleBackColor = true;
+            deleteButton2.Click += deleteButton2_Click;
             // 
             // searchButton1
             // 
@@ -152,6 +153,7 @@
             searchButton2.TabIndex = 10;
             searchButton2.Text = "Search";
             searchButton2.UseVisualStyleBackColor = true;
+            searchButton2.Click += searchButton2_Click;
             // 
             // searchBox1
             // 
@@ -220,7 +222,7 @@
             Controls.Add(modifyButton2);
             Controls.Add(InventoryManagmentLabel);
             Controls.Add(productsLabel);
-            Controls.Add(AddPartsLabel);
+            Controls.Add(PartsLabel);
             Controls.Add(deleteButton1);
             Controls.Add(modifyButton1);
             Controls.Add(addButton1);
@@ -238,7 +240,7 @@
         private Button addButton1;
         private Button modifyButton1;
         private Button deleteButton1;
-        private Label AddPartsLabel;
+        private Label PartsLabel;
         private Label productsLabel;
         private Label InventoryManagmentLabel;
         private Button modifyButton2;

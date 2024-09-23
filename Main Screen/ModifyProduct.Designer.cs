@@ -30,7 +30,7 @@
         {
             searchBox4 = new TextBox();
             searchButton4 = new Button();
-            AddPartsLabel4 = new Label();
+            PartsLabel4 = new Label();
             AddPartsLabel3 = new Label();
             addButton4 = new Button();
             deleteButton4 = new Button();
@@ -70,15 +70,16 @@
             searchButton4.TabIndex = 64;
             searchButton4.Text = "Search";
             searchButton4.UseVisualStyleBackColor = true;
+            searchButton4.Click += searchButton4_Click;
             // 
-            // AddPartsLabel4
+            // PartsLabel4
             // 
-            AddPartsLabel4.AutoSize = true;
-            AddPartsLabel4.Location = new Point(615, 367);
-            AddPartsLabel4.Name = "AddPartsLabel4";
-            AddPartsLabel4.Size = new Size(208, 15);
-            AddPartsLabel4.TabIndex = 63;
-            AddPartsLabel4.Text = "AddParts Associated with this Product";
+            PartsLabel4.AutoSize = true;
+            PartsLabel4.Location = new Point(615, 367);
+            PartsLabel4.Name = "PartsLabel4";
+            PartsLabel4.Size = new Size(186, 15);
+            PartsLabel4.TabIndex = 63;
+            PartsLabel4.Text = "Parts Associated with this Product";
             // 
             // AddPartsLabel3
             // 
@@ -107,6 +108,7 @@
             deleteButton4.TabIndex = 60;
             deleteButton4.Text = "Delete";
             deleteButton4.UseVisualStyleBackColor = true;
+            deleteButton4.Click += deleteButton4_Click;
             // 
             // cancelButton4
             // 
@@ -172,6 +174,7 @@
             minBox4.Name = "minBox4";
             minBox4.Size = new Size(69, 23);
             minBox4.TabIndex = 52;
+            minBox4.TextChanged += minBox4_TextChanged;
             // 
             // maxBox4
             // 
@@ -179,6 +182,7 @@
             maxBox4.Name = "maxBox4";
             maxBox4.Size = new Size(69, 23);
             maxBox4.TabIndex = 51;
+            maxBox4.TextChanged += maxBox4_TextChanged;
             // 
             // priceLabel4
             // 
@@ -222,6 +226,7 @@
             priceBox4.Name = "priceBox4";
             priceBox4.Size = new Size(135, 23);
             priceBox4.TabIndex = 46;
+            priceBox4.TextChanged += priceBox4_TextChanged;
             // 
             // inventoryBox4
             // 
@@ -229,6 +234,7 @@
             inventoryBox4.Name = "inventoryBox4";
             inventoryBox4.Size = new Size(135, 23);
             inventoryBox4.TabIndex = 45;
+            inventoryBox4.TextChanged += inventoryBox4_TextChanged;
             // 
             // nameBox4
             // 
@@ -236,6 +242,7 @@
             nameBox4.Name = "nameBox4";
             nameBox4.Size = new Size(135, 23);
             nameBox4.TabIndex = 44;
+            nameBox4.TextChanged += nameBox4_TextChanged;
             // 
             // modifyProductLabel
             // 
@@ -265,7 +272,7 @@
             ClientSize = new Size(1443, 750);
             Controls.Add(searchBox4);
             Controls.Add(searchButton4);
-            Controls.Add(AddPartsLabel4);
+            Controls.Add(PartsLabel4);
             Controls.Add(AddPartsLabel3);
             Controls.Add(addButton4);
             Controls.Add(deleteButton4);
@@ -299,7 +306,7 @@
 
         private TextBox searchBox4;
         private Button searchButton4;
-        private Label AddPartsLabel4;
+        private Label PartsLabel4;
         private Label AddPartsLabel3;
         private Button addButton4;
         private Button deleteButton4;
