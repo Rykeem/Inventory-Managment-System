@@ -46,8 +46,8 @@ namespace Main_Screen
             }
             if (dataGridView2.Rows.Count >= 7)
             {
-                dataGridView2.Rows[7].Visible = false;
                 dataGridView2.Rows[6].Visible = false;
+                dataGridView2.Rows[7].Visible = false;
             }
         }
 

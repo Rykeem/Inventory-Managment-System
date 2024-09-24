@@ -187,6 +187,7 @@
             dataGridView4.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView4.Size = new Size(643, 183);
             dataGridView4.TabIndex = 33;
+            dataGridView4.DataBindingComplete += dataGridView4_DataBindingComplete;
             // 
             // saveButton3
             // 

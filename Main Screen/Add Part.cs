@@ -39,7 +39,7 @@ namespace Main_Screen
             if (string.IsNullOrWhiteSpace(idorcompanyBox.Text) || !int.TryParse(idorcompanyBox.Text, out int almostDone))
             {
                 idorcompanyBox.BackColor = Color.Red;
-                //saveButton.Enabled = false;
+                
 
             }
             else
@@ -55,7 +55,7 @@ namespace Main_Screen
             if (string.IsNullOrWhiteSpace(idorcompanyBox.Text))
             {
                 idorcompanyBox.BackColor = Color.Red;
-                //saveButton.Enabled = false;
+                
 
             }
             else

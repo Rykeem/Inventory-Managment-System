@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,20 +28,37 @@ namespace Main_Screen
             idBox3.ReadOnly = true;
             inventory = _inventory;
             _tempList = new BindingList<Part>();
-
+            HideRows();
 
 
         }
-
+        public void HideRows()
+        {
+            if (dataGridView3.Columns.Count >= 7)
+            {
+                dataGridView3.Columns[6].Visible = false;
+                dataGridView3.Columns[7].Visible = false;
+                
+            }
+            if (dataGridView4.Columns.Count >= 6)
+            {
+                dataGridView4.Columns[6].Visible = false;
+                dataGridView4.Columns[7].Visible = false;
+                
+            }
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
-            dataGridView3.DataSource = null;
+
             dataGridView3.DataSource = _inventory.AllParts;
-            dataGridView3.Refresh();
-            dataGridView4.DataSource = null;
+           
+
+
             dataGridView4.DataSource = _tempList;
-            dataGridView4.Refresh();
-            //HideRows();
+           
+
+            HideRows();
+
 
         }
 
@@ -111,7 +129,7 @@ namespace Main_Screen
 
 
 
-            
+
         }
 
         private void deleteButton3_Click(object sender, EventArgs e)
@@ -214,6 +232,11 @@ namespace Main_Screen
             else
             { minBox3.BackColor = Color.White; }
             SaveButton();
+        }
+
+        private void dataGridView4_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            HideRows();
         }
     }
 }

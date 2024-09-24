@@ -141,6 +141,7 @@
             dataGridView5.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView5.Size = new Size(643, 183);
             dataGridView5.TabIndex = 56;
+            dataGridView5.DataBindingComplete += dataGridView5_DataBindingComplete;
             // 
             // idBox4
             // 

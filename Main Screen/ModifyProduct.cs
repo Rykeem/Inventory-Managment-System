@@ -47,13 +47,32 @@ namespace Main_Screen
             dataGridView5.DataSource = _inventory.AllParts;
             dataGridView5.Refresh();
 
-
+            
         }
-
+        public void HideRows()
+        {
+            if (dataGridView5.Columns.Count >= 7)
+            {
+                dataGridView5.Columns[6].Visible = false;
+                dataGridView5.Columns[7].Visible = false;
+            }
+            if (dataGridView6.Columns.Count >= 7)
+            {
+                dataGridView6.Columns[7].Visible = false;
+                dataGridView6.Columns[6].Visible = false;
+            }
+        }
         private void ModifyProduct_Load(object sender, EventArgs e)
         {
 
-
+            dataGridView5.DataSource = null;
+            dataGridView5.DataSource = _inventory.AllParts;
+            dataGridView5.Refresh();
+            HideRows();
+            dataGridView6.DataSource = null;
+            dataGridView6.DataSource = _tempList;
+            dataGridView6.Refresh();
+            HideRows();
 
 
 
@@ -221,6 +240,11 @@ namespace Main_Screen
             else
             { minBox4.BackColor = Color.White; }
             SaveButton();
+        }
+
+        private void dataGridView5_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            HideRows();
         }
     }
 }

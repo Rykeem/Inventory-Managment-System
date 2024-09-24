@@ -51,6 +51,18 @@ namespace Main_Screen
             if (houseButton2.Checked)
             {
                 companyoridlabel2.Text = "MachineID";
+
+                if (string.IsNullOrWhiteSpace(idorcompanyBox2.Text) || !int.TryParse(idorcompanyBox2.Text, out int almostDone))
+                {
+                    idorcompanyBox2.BackColor = Color.Red;
+                    //saveButton.Enabled = false;
+
+                }
+                else
+                {
+                    idorcompanyBox2.BackColor = Color.White;
+                }
+                SaveButton();
             }
 
         }
@@ -60,6 +72,20 @@ namespace Main_Screen
             if (outsourcedButton2.Checked)
             {
                 companyoridlabel2.Text = "CompanyName";
+                if (string.IsNullOrWhiteSpace(idorcompanyBox2.Text))
+                {
+                    idorcompanyBox2.BackColor = Color.Red;
+                    //saveButton.Enabled = false;
+
+                }
+                else
+                {
+                    {
+                        idorcompanyBox2.BackColor = Color.White;
+
+                    }
+                    SaveButton();
+                }
             }
         }
 
