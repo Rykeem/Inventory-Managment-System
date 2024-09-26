@@ -171,7 +171,41 @@ namespace Main_Screen
             if (int.TryParse(searchBox1.Text, out int ID))
             {
                 _inventory.LookupPart(ID, dataGridView1);
+                
 
+            }
+            else
+            {
+                  bool searchSuccess = false;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                
+
+                if (row.Cells["Name"].Value != null)
+                {
+                    
+                    string tempVal = row.Cells["Name"].Value.ToString();
+                    
+                    {
+                        if (typedText == tempVal)
+                        {
+                            row.Selected = true;
+                            searchSuccess = true;
+                        }
+                       
+
+                    }
+                     
+
+                }
+                
+
+            };
+            if (!searchSuccess)
+            {
+                MessageBox.Show("Item not found");
+            }
+            
             }
            
            
@@ -224,10 +258,42 @@ namespace Main_Screen
                 _inventory.lookupProduct(ID, dataGridView2);
                
             }
-            
-            
-            
-            
+            else
+            {
+                bool searchSuccess = false;
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+
+
+                    if (row.Cells["Name"].Value != null)
+                    {
+
+                        string tempVal = row.Cells["Name"].Value.ToString();
+
+                        {
+                            if (typedText == tempVal)
+                            {
+                                row.Selected = true;
+                                searchSuccess = true;
+                            }
+
+
+                        }
+
+
+                    }
+
+
+                };
+                if (!searchSuccess)
+                {
+                    MessageBox.Show("Item not found");
+                }
+
+            }
+
+
+
         }
     }
 }

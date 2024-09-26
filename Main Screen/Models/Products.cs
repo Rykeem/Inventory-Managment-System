@@ -56,22 +56,25 @@ namespace Main_Screen.Models
         
         public Part lookupAssociatedPart(int ID, DataGridView dataGridView)
         {
-
+            bool susscess = false;
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 if (row.Cells["PartID"].Value != null)
                 {
                     int tempVal;
-                    bool susscess = false;
+                    
                     if (int.TryParse(row.Cells["PartID"].Value.ToString(), out tempVal))
                     {
                         if (ID == tempVal)
-                        { row.Selected = true; }
-                        else if (!susscess)
-                        { MessageBox.Show("Item not found"); }
+                        {   row.Selected = true;
+                            susscess = true;
+                        }
+                       
                     }
                 }
             };
+             if (!susscess)
+            { MessageBox.Show("Item not found"); }
             return null;
         }
         

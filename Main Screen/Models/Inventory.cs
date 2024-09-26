@@ -78,9 +78,10 @@ namespace Main_Screen.Models
         }
         public Part LookupPart(int ID, DataGridView dataGridView) //datagrid 1 search bar
         {
+            bool searchSuccess = false;
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                bool searchSuccess = false;
+                
 
                 if (row.Cells["PartID"].Value != null)
                 {
@@ -93,25 +94,28 @@ namespace Main_Screen.Models
                             row.Selected = true;
                             searchSuccess = true;
                         }
-                        else if (!searchSuccess)
-                        { 
-                            MessageBox.Show("Item not found"); 
-                        }
+                       
 
                     }
                      
 
                 }
                 
+
             };
+            if (!searchSuccess)
+            {
+                MessageBox.Show("Item not found");
+            }
             return null;
         }
 
         public Product lookupProduct(int ID, DataGridView dataGridView) // datagrid 2 search bar 
         {
+            bool success = false;
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
-                bool success = false;
+               
                 int tempVal;
                 if (int.TryParse(row.Cells["ProductID"].Value.ToString(), out tempVal))
                 {
@@ -120,12 +124,13 @@ namespace Main_Screen.Models
                         row.Selected = true;
                         success = true;
                     }
-                    else if (!success)
-                    {
-                        MessageBox.Show("Item not found");
-                    }
+                   
                 }
             };
+            if (!success)
+            {
+                MessageBox.Show("Item not found");
+            }
             return null;
         }
     }

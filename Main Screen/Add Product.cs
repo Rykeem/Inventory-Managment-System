@@ -161,6 +161,39 @@ namespace Main_Screen
             {
                 _product.lookupAssociatedPart(ID, dataGridView3);
             }
+            else
+            {
+                bool searchSuccess = false;
+                foreach (DataGridViewRow row in dataGridView3.Rows)
+                {
+
+
+                    if (row.Cells["Name"].Value != null)
+                    {
+
+                        string tempVal = row.Cells["Name"].Value.ToString();
+
+                        {
+                            if (typedText == tempVal)
+                            {
+                                row.Selected = true;
+                                searchSuccess = true;
+                            }
+
+
+                        }
+
+
+                    }
+
+
+                };
+                if (!searchSuccess)
+                {
+                    MessageBox.Show("Item not found");
+                }
+
+            }
 
         }
         private void SaveButton()
