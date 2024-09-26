@@ -224,7 +224,7 @@ namespace Main_Screen
 
             foreach (var part in ascParts.AssociatedParts) 
             {
-                if (_inventory.AllParts.Contains(part))
+                if (part != null)
                     {  isInParts = true; break; }
             }
             if(isInParts)
