@@ -1,4 +1,6 @@
 This is a project I used for school where I used c# to create an inventory managment system 
+
+
 4041.3.1 : Classes and Interfaces
 
 The graduate designs software solutions with appropriate classes, objects, methods, and interfaces to achieve specific goals.
